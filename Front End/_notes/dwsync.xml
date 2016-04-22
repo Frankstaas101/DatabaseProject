@@ -4,21 +4,23 @@
 <file name="style.css" server="elvis.rowan.edu//home/staasf7/public_html/" local="131058301311057889" remote="131058303090000000" Dst="2" />
 <file name="notify.js" server="elvis.rowan.edu//home/staasf7/public_html/" local="131041294710819124" remote="131041384330000000" Dst="2" />
 <file name="notify.min.js" server="elvis.rowan.edu//home/staasf7/public_html/" local="131041298210788134" remote="131041298460000000" Dst="2" />
-<file name=".htaccess" server="elvis.rowan.edu/public_html/" local="131039364790000000" remote="131039364790000000" Dst="2" />
-<file name=".htpasswd" server="elvis.rowan.edu/public_html/" local="131039367610000000" remote="131039367610000000" Dst="2" />
-<file name="index.php" server="elvis.rowan.edu/public_html/" local="131058364325154016" remote="131058367870000000" Dst="2" />
+<file name=".htaccess" server="elvis.rowan.edu/public_html/" local="131058356090000000" remote="131058356090000000" Dst="2" />
+<file name=".htpasswd" server="elvis.rowan.edu/public_html/" local="131058356090000000" remote="131058356090000000" Dst="2" />
+<file name="index.php" server="elvis.rowan.edu/public_html/" local="131058407659953954" remote="131058407890000000" Dst="2" />
 <file name="notify.js" server="elvis.rowan.edu/public_html/" local="131041384330000000" remote="131041384330000000" Dst="2" />
 <file name="notify.min.js" server="elvis.rowan.edu/public_html/" local="131041298460000000" remote="131041298460000000" Dst="2" />
-<file name="style.css" server="elvis.rowan.edu/public_html/" local="131058369222787633" remote="131058369450000000" Dst="2" />
+<file name="style.css" server="elvis.rowan.edu/public_html/" local="131058409660123168" remote="131058409890000000" Dst="2" />
 <file name="style.css" server="S:/Users/Frank-SSD/Desktop/Testing Server" local="131058303090000000" remote="131058303090000000" Dst="2" />
 <file name="notify.js" server="S:/Users/Frank-SSD/Desktop/Testing Server" local="131041384330000000" remote="131041384330000000" Dst="2" />
 <file name="index.php" server="S:/Users/Frank-SSD/Desktop/Testing Server" local="131058303090000000" remote="131058303090000000" Dst="2" />
 <file name=".htaccess" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131039364790000000" remote="131039364790000000" Dst="2" />
 <file name=".htpasswd" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131039367610000000" remote="131039367610000000" Dst="2" />
 <file name="notify.min.js" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131041298460000000" remote="131041298460000000" Dst="2" />
-<file name="style.css" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058372203437633" remote="131058372200000000" Dst="2" />
+<file name="style.css" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058409660123168" remote="131058409660000000" Dst="2" />
 <file name="notify.js" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131041384330000000" remote="131041384330000000" Dst="2" />
-<file name="index.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058364325154016" remote="131058364320000000" Dst="2" />
+<file name="index.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058407659953954" remote="131058407650000000" Dst="2" />
 <file name=".htaccess" server="elvis.rowan.edu" local="131039364790000000" remote="131058355190000000" Dst="2" />
 <file name=".htpasswd" server="elvis.rowan.edu" local="131039367610000000" remote="131058355220000000" Dst="2" />
+<file name="admin.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058409663448986" remote="131058409660000000" Dst="2" />
+<file name="admin.php" server="elvis.rowan.edu/public_html/" local="131058409663448986" remote="131058409890000000" Dst="2" />
 </dwsync>

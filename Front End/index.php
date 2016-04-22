@@ -16,7 +16,8 @@
         // Handle error - notify administrator, log to a file, show an error screen, etc.
 		echo "Could not establish MySQL connection: " + mysqli_connect_error();
     } else {
-		echo "<img src=\"images/accept-database.png\" alt=\"Database Connected Successfully\" style=\"width:25px;height:25px;\">";
+		// Display a little database connection icon in the top right corner signifiying success
+		echo "<img src=\"images/dbSuccess.png\" alt=\"Database Connected Successfully\" style=\"width:25px;height:25px;\">";
 	}
 ?>
 <img class="logo" src="images/Logo.png" alt="Fancy Retailer Logo" ></img>
@@ -28,21 +29,48 @@
                 <th>Product</th>
                 <th>Price</th>
                 <th>Add to Order</th>
+                <th>Average Rating</th>
              </tr>
         <?php	
-        $query = "select UPC, Pname, price from product;";
+        $query = "select UPC, Pname, price, avg( rating) as avg_rating from product left outer join rated using(UPC) group by UPC order by avg_rating desc;";
         
         if ($stmt = $connection->prepare($query)) {
             $stmt->execute();
-            $stmt->bind_result($UPC, $Pname, $price);
+            $stmt->bind_result($UPC, $Pname, $price, $avg_rating);
              while ($stmt->fetch()) {
                 echo "<tr>";
                 echo "<td class=\"tooltip\"><span class=\"tooltiptext\">This item is on Sale!</span>". $UPC . "</td>";
                 echo "<td>" . $Pname . "</td>";
-                echo "<td>$" . $price . "</td>";
+                echo "<td>$" . $price . ".00</td>";
                 echo "<td><button class=\"add-cart-button\" onclick=\"add('". $Pname ."', '". $UPC ."')\"></button></td>";
+				
+				if ($avg_rating == 5) 
+				{
+					echo "<td> <img class =\"stars\" title=\"". $avg_rating ."\"  src=\"images/5Stars.png\" alt=\"5 Stars\"></td>";
+					}
+				else if ($avg_rating >= 4.0) 
+				{
+					echo "<td> <img class =\"stars\" title=\"". $avg_rating ."\"  src=\"images/4Stars.png\" alt=\"4 Stars\"></td>";
+				}
+				else if ($avg_rating >= 3.0) 
+				{
+					echo "<td> <img class =\"stars\" title=\"". $avg_rating ."\"  src=\"images/3Stars.png\" alt=\"3 Stars\"></td>";
+				}
+				else if ($avg_rating >= 2.0) 
+				{
+					echo "<td> <img class =\"stars\" title=\"". $avg_rating ."\"  src=\"images/2Stars.png\" alt=\"2 Stars\"></td>";
+				}
+				else if ($avg_rating >= 1.0) 
+				{
+					echo "<td> <img class =\"stars\" title=\"". $avg_rating ."\"  src=\"images/1Stars.png\" alt=\"1 Star\"></td>";
+				}
+				else if ($avg_rating >= 0 ) 
+				{
+					echo "<td> <img class =\"stars\" title=\"". $avg_rating ."\"  src=\"images/0Stars.png\" alt=\"No Stars\"></td>";
+				}
+				
                 echo "</tr>";
-                //printf("%s, %s, %s, %s, %s, %s, %s, %s\n", $building_id, $building_name, $street, $number, $country, $state, $town, $zip);
+
             }
             $stmt->close();
         }                        

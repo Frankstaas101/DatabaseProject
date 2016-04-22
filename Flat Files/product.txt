@@ -1,0 +1,50 @@
+00001,Xtreme Graphics 5000,399.99,Melmarc Products Inc.,50,10
+00002,Sure Feet Running Shoes,59.99,NK Apparel,76,30
+00003,Happy Smiles Face Paints,19.99,Bel-Art Products,203,75
+00004,Overpriced Calculator: College Edition,99.99,ViTech Scientific,20,5
+00005,Super-Sensor Door Opener,120.00,Motion Enhanced Technology,4,2
+00006,No More Stink Socks,9.99,NK Apparel,134,60
+00007,Far Out! Telescope,1099.99,Seatec Astronomy,3,1
+00008,Bass Booster Subwoofers,124.99,Melmarc Products Inc.,23,10
+00009,Star Gazer Junior,39.99,Seatec Astronomy,55,35
+00010,Sunshine Yellow,44.99,Bel-Art Products,20,15
+00011,Job Hunter Discount Suit,74.99,NK Apparel,44,30
+00012,Head Secure Hard Hat,59.99,Grainger Industrial Supply,40,20
+00013,The Overclocker: Extreme CPU,349.99,Melmarc Products Inc.,32,30
+00014,DG Camera,120.00,ProtoVision,150,20
+00015,Puzzle Blocks for Kids,19.99,HB Products LLC,200,30
+00016,Chef Gourmet Pasta,8.00,PolyOne,50,10
+00017,Portable Motion Detector,50.00,Motion Enhanced Technology,150,10
+00018,Smart Cooker,65.00,Pegatron Products,150,20
+00019,Summer Dress,19.00,Bel-Art Products,250,35
+00020,Book of Colors and Numbers,9.99,C. C. Filson,70,10
+00021,Mini Acoustic Guitar,35.00,Akustica,50,10
+00022,Travel Coffee Maker,39.00,Cambridge Engineered Solutions,200,50
+00023,Car Stereo System,60.00,Kaman Industrial Technologies,50,10
+00024,Winter Jacket,55.00,NK Apparel,100,20
+00025,Talking Doll,25.00,Melmarc Products Inc.,200,15
+00026,Telescope,300.00,Seatec Astronomy,50,10
+00027,Printer Paper,4.00,HB Products LLC,300,50
+00028,AC Unit,2000.00,Large System Distributors,10,4
+00029,Ventilation Filter,22.00,Kaman Industrial Technologies,100,20
+00030,Surface Pro 4,600.00,UCA Group Inc.,30,10
+00031,Sunglasses,50.00,ProtoVision,75,15
+00032,Thermal Sensor,350.00,Hadden Industries,15,3
+00033,Digital Clock,15.00,Motion Enhanced Technology,500,150
+00034,Sweater,34.99,NK Apparel,100,25
+00035,Transformer Action Figure,5.00,Pegatron Products,2000,250
+00036,Star Wars Sticker,0.50,Akustica,10000,2000
+00037,Smartwatch,250.00,ViTech Scientific,50,10
+00038,Winnie the Pooh Book,7.99,C. C. Filson,80,20
+00039,Calculus Book,50.00,HB Products,250,50
+00040,Basic Telescope,100.00,Seatec Astronomy,200,20
+00041,High End Telescope,100.00,Seatec Astronomy,100,20
+00042,Gerber Baby Food,5.00,HB Products,500,50
+00043,Leap Frog Tablet,100.00,Seatec Astronomy,100,20
+00044,Robot Chef,4999.99,ViTech Scientific,75,10
+00045,Kids Baking Set,50.00,Melmarc Products Inc.,250,20
+00046,Math Card Game,10.00,HB Products,250,20
+00047,Learn To Drive Game,50.00,Melmarc Products Inc.,200,25
+00048,X-Ray Goggles,100.00,ProtoVision,150,15
+00049,Babys First Game Console,150.00,Motion Enhanced Technology,100,20
+00050,Baby Learns German,50.00,Aleris International Inc.,175,20

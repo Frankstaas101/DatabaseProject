@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+img.logo{
+    display: block;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #333;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.TabbedPanelsTab TabbedPanels {
+	background-color: #333;
+}
+.TabbedPanelsContent {
+	background-color: #333;
+}
+
+h1 {
+	text-align: center;
+	margin: 0 auto;
+    color: #DDD;
+	padding: 15px;
+}
+
+h2 {
+	text-align: left;
+	font-size: 16px;
+	margin: 0 auto;
+    color: #DDD;
+}
+
+h3 {
+	text-align: left;
+	font-size: 16px;
+	margin: 0 auto;
+    color: #DDD;
+}
+
+tr th {
+	background-color: #222;
+	color: #DDD;
+}
+
+table {
+	border: 1px solid black;
+	color: #666;
+	margin: 0 auto;
+	width: 80%;
+}
+
+tr:hover{
+  	background: #5640ff;
+ 	 background-image: -moz-linear-gradient(#5640ff, #29a6ff);
+ 	 background-image: -webkit-linear-gradient(#5640ff, #29a6ff);
+ 	 background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5640ff), to(#29a6ff));
+ 	 background-image: -o-linear-gradient(#5640ff, #29a6ff);
+ 	 background-image: linear-gradient(#5640ff, #29a6ff);
+}
+
+tr {
+	background-color: #666;
+	color: #DDD;
+	position: relative;
+	text-align: center;
+    height: 30px;
+	padding: 15px;
+} 
+.add-cart-button{
+	background-color: transparent;
+    border: 0px solid #4CAF50; /* Green */
+    -webkit-transition-duration: 0.4s; /* Safari f218*/
+    transition-duration: 0.4s;
+	border-radius: 2px;
+	width: 50%;
+	font-family: FontAwesome; 
+	font-size: 24px;
+	color: #FFF;
+}
+
+.add-cart-button:before{
+	font-family: FontAwesome;
+	content: "\f218"; /*f218*/
+	display: inline-block;
+	padding-right: 3px;
+	vertical-align: middle;
+}
+
+.remove-cart-button{
+	background-color: transparent;
+    border: 0px solid #900; /* Green */
+    -webkit-transition-duration: 0.4s; /* Safari f218*/
+    transition-duration: 0.4s;
+	border-radius: 2px;
+	width: 50%;
+	font-family: FontAwesome; 
+	font-size: 24px;
+	color: #FFF;
+}
+
+.remove-cart-button:before{
+	font-family: FontAwesome;
+	content: "\f057"; /*f218*/
+	display: inline-block;
+	padding-right: 3px;
+	vertical-align: middle;
+}
+
+.remove-cart-button:hover { 
+    color: #FF5353;/* Red */
+}
+
+.add-cart-button:hover { 
+    color: #4CAF50;/* Green */
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltiptext:before {
+	font-family: FontAwesome;
+	content: "\f12a"; /*Exclaimation Icon*/
+	display: inline-block;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: #444;
+	border: 1px #4CAF50 solid;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 2px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

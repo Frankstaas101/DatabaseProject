@@ -79,7 +79,14 @@ VALUES (CURDATE(), NULL, 'DISCOVER', '3245369873455558', 4);
 
 -- 1. h. Ability to track an order.
 -- ---------------------------------------------------------------------------------
-
+DELIMITER //
+CREATE PROCEDURE trackOrder (IN order_id INT)
+BEGIN
+  SELECT *
+  from orders
+  where orderID = order_id;
+END //
+DELIMITER ;
 
 -- 1. i. Ability to view, add and remove products on the wish list.
 -- ---------------------------------------------------------------------------------

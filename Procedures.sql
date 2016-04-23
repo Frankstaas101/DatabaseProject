@@ -246,13 +246,25 @@ DELIMITER ;
 -- Through the Customer component:
 -- 2. t. List of bestselling products. Bob
 -- ---------------------------------------------------------------------------------
+-- sell limit is the minimum count which a product must have within all of the contains table in order to be considered 'best selling'
 DELIMITER //
-Create Procedure getBestSelling (in sell_limit int) 
+Create Procedure getBestSellingByLimit (in sell_limit int) 
 begin
 	select UPC
     from contains
     group by UPC
     having count(UPC) > sell_limit;
+END //
+DELIMITER ;
+-- num_limit is the top x ammount of best sellers you want to retain, ordered, desc, by the their UPC's respective count in the conatains tabale
+DELIMITER //
+Create Procedure getBestSellingTopNum (in num_limit int) 
+begin
+	select UPC
+    from contains
+    group by UPC
+    order by count(*) desc
+    limit num;
 END //
 DELIMITER ; 
 

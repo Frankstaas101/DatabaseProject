@@ -2,31 +2,27 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 
-<div>
 <?php
 	include('session.php');
 	echo $nav_bar_and_logo;
 ?>
-</div>
-<div>
 
-<body>
-<form action="login.php" method="post">
-    <p>
-        <label for="userName">Username:</label>
-        <input type="text" name="userName" id="userName"> 
-        <label for="pass">    Password:</label>
-        <input type="password" name="pass" id="pass"> 
-        <input class="loginBtn" type="submit" value="Login" >
-    </p>
-   
-</form>
-</div>
-</body>
+
+	<h1>Hello <?php echo $login_session?></h1>
+    <h1>Your Customer ID is: <?php echo $login_session_id?></h1>
+    <h1>Your User Level is: <?php echo $login_session_privlages?></h1>
 
 </head>
+
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="notify.js"></script>
 <script type="text/javascript">
+
+function add(name) {
+	$.notify("Added " + name, "success");
+}
+
 </script>

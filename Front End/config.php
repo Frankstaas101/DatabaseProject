@@ -15,7 +15,7 @@ if($connection === false) {
 	
 } else {
 	// Display a little database connection icon in the top right corner signifiying success
-	echo "<img src=\"images/dbSuccess.png\" alt=\"Database Connected Successfully\" style=\"width:25px;height:25px;\">";
+	$connection_success = "<img src=\"images/dbSuccess.png\" alt=\"Database Connected Successfully\" style=\"width:25px;height:25px;\">";
 }
 	
 ?>

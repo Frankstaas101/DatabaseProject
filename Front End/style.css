@@ -1,15 +1,77 @@
 @charset "utf-8";
 /* CSS Document */
 
-a:visited {
-    color: #ff704d;
+/* NAVIGATION BAR RELATED */
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    position: fixed;
+    top: 40;
+    width: 100%; 
+	z-index: 100;
+    -webkit-box-shadow: 0px 2px 3px #111;
+    -moz-box-shadow: 0px 2px 3px #111;
+    box-shadow: 0px 2px 3px #111;
 }
 
-img.logo{
+.logo{
+	margin: auto;
     display: block;
-    margin: 0 auto;
+	position: fixed;
+    top: 6;
 }
 
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #1ebfff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;	   
+	-webkit-transition-duration: 0.4s; /* Safari f218*/
+    transition-duration: 0.4s;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+	display: block;
+    color: white !important;
+    text-align: center;
+    padding: 14px 16px;
+    background-color: #222;
+}
+
+.logoutLink {
+	display: block;
+    color: white !important;
+    text-align: center;
+    padding: 14px 16px;
+    background-color: #222;
+}
+
+a:visited {
+    color: #1ebfff;
+}
+
+/* BODY */
+body {
+	margin: 0 auto;
+	margin-top: 100px;
+	color: #ddd;
+    background-color: #333;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* STAR RATING IMAGES */
 img.stars{
     display: block;
     margin: 0 auto;
@@ -17,19 +79,8 @@ img.stars{
 	height: 20px;
 }
 
-body {
-	color: #ddd;
-    background-color: #333;
-	font-family: 'Open Sans', sans-serif;
-}
 
-.TabbedPanelsTab TabbedPanels {
-	background-color: #333;
-}
-.TabbedPanelsContent {
-	background-color: #333;
-}
-
+/* HEADINGS */
 h1 {
 	text-align: center;
 	margin: 0 auto;
@@ -51,16 +102,18 @@ h3 {
     color: #DDD;
 }
 
-tr th {
-	background-color: #222;
-	color: #DDD;
-}
-
+/* TABLE RELATED */
 table {
 	border: 1px solid black;
 	color: #666;
 	margin: 0 auto;
 	width: 50%;
+	overflow: hidden;
+}
+
+tr th {
+	background-color: #222;
+	color: #DDD;
 }
 
 tr:hover{
@@ -80,6 +133,24 @@ tr {
     height: 30px;
 	padding: 15px;
 } 
+
+/* LOGIN BUTTON */
+input{
+	background-image: none;
+	background-color: #222;
+	color: #1ebfff;
+    -webkit-transition-duration: 0.4s; /* Safari f218*/
+    transition-duration: 0.4s;
+	font-size: 16px;
+	padding: 14px 10px;
+	border: 0px;
+}
+
+input:hover{
+	background-color: #111;
+}
+
+/* ADD TO CART BUTTONS */
 .add-cart-button{
 	background-color: transparent;
     border: 0px solid #4CAF50; /* Green */

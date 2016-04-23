@@ -5,12 +5,11 @@
 <link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 
 <?php
-	include('session.php')
+	include('session.php');
+	echo $nav_bar_and_logo;
 ?>
 
-<img class="logo" src="images/Logo.png" alt="Fancy Retailer Logo" ></img>
 
-Logged in as: <?php echo $login_session; ?>
 <h2 class="result"></h2>
     <h1>Products</h1>
         <table>
@@ -75,7 +74,7 @@ Logged in as: <?php echo $login_session; ?>
 <script type="text/javascript">
 
 function add(name) {
-	$.notify("Added " + name, "success");
+	$.notify("Added " + name, "success", { positoin: "bottom right"});
 }
 
 </script>

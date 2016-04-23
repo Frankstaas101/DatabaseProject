@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+a:visited {
+    color: #ff704d;
+}
+
 img.logo{
     display: block;
     margin: 0 auto;
@@ -14,6 +18,7 @@ img.stars{
 }
 
 body {
+	color: #ddd;
     background-color: #333;
 	font-family: 'Open Sans', sans-serif;
 }

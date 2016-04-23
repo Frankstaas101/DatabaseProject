@@ -98,11 +98,10 @@ BEGIN
   where orderID = order_id;
 END //
 DELIMITER ;
-
 -- 1. j. Ability to rate products.
 -- ---------------------------------------------------------------------------------
 -- NOTE: use this to check if customer has rated that product yet...
-CREATE PROCEDURE getRating (IN customer_id INT, IN UPC_IN INT)
+CREATE PROCEDURE getRating (IN customer_id INT, IN UPC_IN varchar(5))
 BEGIN
   SELECT *
 	from rated
@@ -111,7 +110,7 @@ END //
 DELIMITER ;
 -- ...Then use this if they have already rated, and wish to update
 DELIMITER //
-CREATE PROCEDURE upadateRateProduct (IN customer_id INT, IN UPC_IN INT, IN new_rating INT)
+CREATE PROCEDURE upadateRateProduct (IN customer_id INT, IN UPC_IN varchar(5), IN new_rating INT)
 BEGIN
   UPDATE rated
 	SET rating = new_rating
@@ -120,7 +119,7 @@ END //
 DELIMITER ;
 -- Else, use this and add a new rating to the table
 DELIMITER //
-CREATE PROCEDURE insertRateProduct (IN customer_id INT, IN UPC_IN INT, IN new_rating INT)
+CREATE PROCEDURE insertRateProduct (IN customer_id INT, IN UPC_IN varchar(5), IN new_rating INT)
 BEGIN
 	INSERT INTO rated(csutomerID, UPC, rating, ratingdate)
 	VALUES (customer_id, UPC_IN, new_rating, NOW());
@@ -176,6 +175,7 @@ CALL getInactiveCustomers(5);
 
 
 -- 2. p. List of highly wished products.
+-- wished limit is the minimum count of an individual item that must b eusrpased in order for it to be cosidered highly wished
 -- ---------------------------------------------------------------------------------
 DELIMITER //
 Create Procedure getHighestWished (IN wished_limit INT) 
@@ -195,12 +195,23 @@ call getHighestWished(10);
 DELIMITER //
 Create Procedure getWishedButNotBought () 
 begin
-	select UPC, rateingdate, customerID
-    from rated AS S
+	select UPC, customerID
+    from wishes AS S
     where UPC not in (Select UPC
 						from orders
                         where S.customerID = orders.customerID)
 	order by customerID asc;
+END //
+DELIMITER ;
+-- for use of finding a given customer's wished but not bought list
+DELIMITER //
+Create Procedure getWishedButNotBoughtByID (IN customer_id int) 
+begin
+	select UPC, customerID
+    from wishes AS S
+    where customerID = 7 and UPC not in (Select UPC
+													from orders
+													where S.customerID = orders.customerID);
 END //
 DELIMITER ; 
 

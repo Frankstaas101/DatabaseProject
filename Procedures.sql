@@ -90,9 +90,42 @@ DELIMITER ;
 
 -- 1. i. Ability to view, add and remove products on the wish list.
 -- ---------------------------------------------------------------------------------
+DELIMITER //
+CREATE PROCEDURE trackOrder (IN order_id INT)
+BEGIN
+  SELECT *
+  from orders
+  where orderID = order_id;
+END //
+DELIMITER ;
 
 -- 1. j. Ability to rate products.
 -- ---------------------------------------------------------------------------------
+-- NOTE: use this to check if customer has rated that product yet...
+CREATE PROCEDURE getRating (IN customer_id INT, IN UPC_IN INT)
+BEGIN
+  SELECT *
+	from rated
+	WHERE UPC = UPC_IN and customerID = customer_id;
+END //
+DELIMITER ;
+-- ...Then use this if they have already rated, and wish to update
+DELIMITER //
+CREATE PROCEDURE upadateRateProduct (IN customer_id INT, IN UPC_IN INT, IN new_rating INT)
+BEGIN
+  UPDATE rated
+	SET rating = new_rating
+	WHERE UPC = UPC_IN and customerID = customer_id;
+END //
+DELIMITER ;
+-- Else, use this and add a new rating to the table
+DELIMITER //
+CREATE PROCEDURE insertRateProduct (IN customer_id INT, IN UPC_IN INT, IN new_rating INT)
+BEGIN
+	INSERT INTO rated(csutomerID, UPC, rating, ratingdate)
+	VALUES (customer_id, UPC_IN, new_rating, NOW());
+END //
+DELIMITER ;
 
 -- 2. k. List of products whose inventory is at reorder level.
 -- ---------------------------------------------------------------------------------

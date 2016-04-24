@@ -2,6 +2,9 @@
    include('config.php');
    session_start();
    
+   $current_orderID = $_SESSION['current_Order'];
+      
+	 
    $user_check = $_SESSION['login_user'];
    
    $ses_sql = mysqli_query($connection,"select username, customerID, name from user left outer join account_type using(ATID) where username = '$user_check' ");
@@ -14,6 +17,8 @@
    
    $login_session_privlages = $row['name'];
 
+
+   
 	if ($login_session != null) {
 	   $nav_bar_and_logo = "
 		<img class=\"logo\" src=\"images/Logo.png\" alt=\"Fancy Retailer Logo\" ></img>

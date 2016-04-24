@@ -59,33 +59,37 @@
 <table>
   <tr>
     <th>UPC</th>
-    <th>Product</th>
-    <th>Price Per Unit</th>
+    <th>Product</th> 
     <th>Supplier</th>
+    <th>Price Per Unit</th>
     <th>On Hand</th>
+    <th>Stock Total</th>
     <th>RO-Level</th>
     <th>Edit</th>
   </tr>
-  <?php                  
+  <?php                 
 	$query = "SELECT UPC, Pname, price, Sname, ammount, reorderlevel FROM product;";
 	
 	if ($stmt = $connection->prepare($query)) {
 		$stmt->execute();
 		$stmt->bind_result($UPC, $Pname, $price, $Sname, $ammount, $reorderlevel);
 		 while ($stmt->fetch()) {
-			echo "<tr>";
+			
 			if ($ammount <= $reorderlevel){
+				echo "<tr class='rolevel-low'>";
 				echo "<td class=\"tooltip-low\"><span class=\"tooltiptext-low\">Low Stock</span>". $UPC . "!</td>";
 			} else {
+				echo "<tr>";
 				echo "<td>". $UPC . "</td>";
 			}
 			echo "<td>" . $Pname . "</td>";
-			echo "<td>$" . $price . ".00</td>";
 			echo "<td>" . $Sname . "</td>";
+			echo "<td>" . money_format('%(#10n',  $price ) . "</td>";
 			echo "<td>" . $ammount . "</td>";
+			echo "<td>" . money_format('%(#10n',  $ammount * $price) . "</td>";
 			echo "<td>" . $reorderlevel . "</td>";
 			echo "<td><button class=\"edit-button\" onclick=\"update_fields('". $UPC ."','". $ammount ."' )\"></button>
-					  <button class=\"remove-button\" onclick=\"update_inventory('". $UPC ."')\"></button></td>";
+					  <button class=\"remove-button\" onclick=\"removeFromInventory('". $UPC ."')\"></button></td>";
 							 
 			echo "</tr>";
 
@@ -104,12 +108,12 @@ function update_fields(UPC_in, ammount_in) {
    $("#ammountEdit").val(ammount_in); 
 }
 
-function removeFromOrder(UPC_in) {
+function removeFromInventory(UPC_in) {
 
    $.ajax({
       type: "POST",
       url: 'update_inventory.php',
-      data: {UPC : UPC_in, quantity : 0 }, // Set quantity to 0 for deletion
+      data: {UPCedit : UPC_in, ammountEdit : -1 }, // Set quantity to 0 for deletion
       
 	  success: function(data) {	
 	  	 if(!data.error) location.reload(true);

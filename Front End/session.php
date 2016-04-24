@@ -1,6 +1,7 @@
 <?php
    include('config.php');
    session_start();
+   setlocale(LC_MONETARY, 'en_US');
    
    $current_orderID = $_SESSION['current_Order'];
       

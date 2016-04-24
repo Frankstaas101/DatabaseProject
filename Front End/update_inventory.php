@@ -6,7 +6,7 @@
     	$ammount_in = mysqli_real_escape_string($connection, $_POST['ammountEdit']);
     	$UPC_in = mysqli_real_escape_string($connection, $_POST['UPCedit']);
 		
-		if ($ammount_in <= 0) {
+		if ($ammount_in <= -1) {
 			$sql = "DELETE FROM product WHERE UPC = '$UPC_in';";
 	
 			if (mysqli_query($connection, $sql)) {

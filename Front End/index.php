@@ -9,7 +9,7 @@
 	echo $nav_bar_and_logo;
 ?>
 </div>
-<div>
+<div class="form-div">
 
 <body>
 <form action="login.php" method="post">

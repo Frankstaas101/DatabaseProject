@@ -42,7 +42,8 @@
                     <th>Edit</th>
                 </tr>
             <?php
-                
+            
+			
             $query = "SELECT UPC, quantity, Pname, price from contains left outer join product using(UPC) where orderID = " . $current_orderID . ";";
             
             if ($stmt = $connection->prepare($query)) {
@@ -50,9 +51,9 @@
                 $stmt->bind_result($UPC, $quantity, $Pname, $price);
                  while ($stmt->fetch()) {
                     echo "<tr>";
-                    echo "<td class=\"tooltip\"><span class=\"tooltiptext\">This item is on Sale!</span>". $UPC . "</td>";
+                    echo "<td>". $UPC . "</td>";
                     echo "<td>" . $Pname . "</td>";
-                    echo "<td>$" . $price * $quantity . ".00</td>";
+                    echo "<td>" . money_format('%(#10n',  $price * $quantity) . "</td>";
                     echo "<td>" . $quantity . "</td>";
                     echo "<td><button class=\"edit-button\" onclick=\"update_fields('". $UPC ."','". $quantity ."' )\"></button>
                               <button class=\"remove-button\" onclick=\"removeFromOrder('". $UPC ."')\"></button></td>";

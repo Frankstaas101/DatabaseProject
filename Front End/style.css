@@ -1,5 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
+
+.form-div{
+    margin: auto;
+    width: 20%
+}
+
 label, input, select {
     /* in order to define widths */
     display: inline-block; 
@@ -172,7 +178,7 @@ table {
 	border: 1px solid black;
 	color: #666;
 	margin: 0 auto;
-	width: 50%;
+	width: 75%;
 	overflow: hidden;
 }
 
@@ -199,6 +205,15 @@ tr {
 	padding: 15px;
 } 
 
+.rolevel-low {
+	background-color: #9F5635;
+	color: #DDD;
+	position: relative;
+	text-align: center;
+    height: 30px;
+	padding: 15px;
+}
+
 .edit:hover {
 	background: #666;
 }
@@ -207,7 +222,7 @@ tr {
 .edit-table {
     
     table-layout: fixed;
-	width: 50%
+	width: 60%
 }
 
 /* LOGIN BUTTON */

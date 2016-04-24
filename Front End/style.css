@@ -22,6 +22,21 @@
     box-shadow: 0px 2px 3px #111;
 }
 
+.adminNavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    position: fixed;
+    top: 91;
+    width: 100%; 
+	z-index: 100;
+    -webkit-box-shadow: 0px 3px 3px #111;
+    -moz-box-shadow: 0px 3px 3px #111;
+    box-shadow: 0px 3px 3px #111;
+}
+
 .logo{
 	margin: auto;
     display: block;

@@ -18,7 +18,7 @@
 
 <h1>Order #<?php echo $current_orderID ?> Contains: </h1>
 <div class="form-div">
-<form  action="set_contains.php" method="post">
+<form  action="edit_contains.php" method="post">
     <p>
         
        
@@ -55,9 +55,9 @@
                 echo "<td>" . $Pname . "</td>";
                 echo "<td>$" . $price * $quantity . ".00</td>";
 				echo "<td>" . $quantity . "</td>";
-                echo "<td><button class=\"edit-button\" onclick=\"update_fields('". $UPC ."','". $quantity ."' )\"></button></td>";
-				
-				 
+                echo "<td><button class=\"edit-button\" onclick=\"update_fields('". $UPC ."','". $quantity ."' )\"></button>
+				          <button class=\"remove-button\" onclick=\"removeFromOrder('". $UPC ."')\"></button></td>";
+								 
                 echo "</tr>";
 
             }
@@ -76,4 +76,19 @@ function update_fields(UPC_in, quantity_in) {
    $("#quantity").val(quantity_in); 
 }
 
+function removeFromOrder(UPC_in) {
+
+   $.ajax({
+      type: "POST",
+      url: 'edit_contains.php',
+      data: {UPC : UPC_in, quantity : 0 }, // Set quantity to 0 for deletion
+      
+	  success: function(data) {	
+	  	 if(!data.error) location.reload(true);
+      }
+	  
+    });
+
+}
+  
 </script>

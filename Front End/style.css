@@ -161,8 +161,6 @@ input:hover{
     border: 0px ; /* Green */
     -webkit-transition-duration: 0.4s; /* Safari f218*/
     transition-duration: 0.4s;
-	border-radius: 2px;
-	width: 50%;
 	font-family: FontAwesome; 
 	font-size: 24px;
 	color: #FFF;
@@ -197,19 +195,17 @@ input:hover{
 	vertical-align: middle;
 }
 
-.remove-cart-button{
+.remove-button{
 	background-color: transparent;
-    border: 0px solid #900; /* Green */
-    -webkit-transition-duration: 0.4s; /* Safari f218*/
-    transition-duration: 0.4s;
-	border-radius: 2px;
-	width: 50%;
+  	border: 0px solid #900; /* Green */
+  	-webkit-transition-duration: 0.4s; /* Safari f218*/
+  	transition-duration: 0.4s;
 	font-family: FontAwesome; 
 	font-size: 24px;
 	color: #FFF;
 }
 
-.remove-cart-button:before{
+.remove-button:before{
 	font-family: FontAwesome;
 	content: "\f057"; /*f218*/
 	display: inline-block;
@@ -217,7 +213,7 @@ input:hover{
 	vertical-align: middle;
 }
 
-.remove-cart-button:hover { 
+.remove-button:hover { 
     color: #FF5353;/* Red */
 }
 

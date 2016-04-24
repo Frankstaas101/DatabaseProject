@@ -9,14 +9,14 @@
 <file name="index.php" server="elvis.rowan.edu/public_html/" local="131059135520301983" remote="131059135780000000" Dst="2" />
 <file name="notify.js" server="elvis.rowan.edu/public_html/" local="131041384330000000" remote="131041384330000000" Dst="2" />
 <file name="notify.min.js" server="elvis.rowan.edu/public_html/" local="131041298460000000" remote="131041298460000000" Dst="2" />
-<file name="style.css" server="elvis.rowan.edu/public_html/" local="131059417162465390" remote="131059418350000000" Dst="2" />
+<file name="style.css" server="elvis.rowan.edu/public_html/" local="131059549388293962" remote="131059554010000000" Dst="2" />
 <file name="style.css" server="S:/Users/Frank-SSD/Desktop/Testing Server" local="131058303090000000" remote="131058303090000000" Dst="2" />
 <file name="notify.js" server="S:/Users/Frank-SSD/Desktop/Testing Server" local="131041384330000000" remote="131041384330000000" Dst="2" />
 <file name="index.php" server="S:/Users/Frank-SSD/Desktop/Testing Server" local="131058303090000000" remote="131058303090000000" Dst="2" />
 <file name=".htaccess" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131039364790000000" remote="131039364790000000" Dst="2" />
 <file name=".htpasswd" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131039367610000000" remote="131039367610000000" Dst="2" />
 <file name="notify.min.js" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131041298460000000" remote="131041298460000000" Dst="2" />
-<file name="style.css" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059417162465390" remote="131059417160000000" Dst="2" />
+<file name="style.css" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059549388293962" remote="131059549380000000" Dst="2" />
 <file name="notify.js" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131041384330000000" remote="131041384330000000" Dst="2" />
 <file name="index.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059135520301983" remote="131059135520000000" Dst="2" />
 <file name=".htaccess" server="elvis.rowan.edu" local="131039364790000000" remote="131058355190000000" Dst="2" />
@@ -25,28 +25,32 @@
 <file name="admin.php" server="elvis.rowan.edu/public_html/" local="131059417888381417" remote="131059418350000000" Dst="2" />
 <file name="products.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059099255823731" remote="131059099250000000" Dst="2" />
 <file name="login.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058689722622010" remote="131058689720000000" Dst="2" />
-<file name="login.php" server="elvis.rowan.edu/public_html/" local="131058689722622010" remote="131058690270000000" Dst="2" />
+<file name="login.php" server="elvis.rowan.edu/public_html/" local="131059541145884040" remote="131059542570000000" Dst="2" />
 <file name="products.php" server="elvis.rowan.edu/public_html/" local="131059099255823731" remote="131059101110000000" Dst="2" />
 <file name="welcome.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059148024050584" remote="131059148020000000" Dst="2" />
-<file name="session.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059228031227704" remote="131059228030000000" Dst="2" />
+<file name="session.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059541253584101" remote="131059541250000000" Dst="2" />
 <file name="config.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058981452064400" remote="131058981450000000" Dst="2" />
-<file name="config.php" server="elvis.rowan.edu/public_html/" local="131058981452064400" remote="131058983200000000" Dst="2" />
-<file name="session.php" server="elvis.rowan.edu/public_html/" local="131059228031227704" remote="131059228510000000" Dst="2" />
-<file name="welcome.php" server="elvis.rowan.edu/public_html/" local="131059148024050584" remote="131059155060000000" Dst="2" />
+<file name="session.php" server="elvis.rowan.edu/public_html/" local="131059541253584101" remote="131059542570000000" Dst="2" />
 <file name="logout.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058678811644009" remote="131058678810000000" Dst="2" />
 <file name="logout.php" server="elvis.rowan.edu/public_html/" local="131058678811644009" remote="131058678950000000" Dst="2" />
 <file name="orders.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059236339856405" remote="131059236330000000" Dst="2" />
 <file name="orders.php" server="elvis.rowan.edu/public_html/" local="131059236339856405" remote="131059237270000000" Dst="2" />
-<file name="insertIntoOrder.php" server="elvis.rowan.edu/public_html/" local="131058957580072251" remote="131058958160000000" Dst="2" />
-<file name="insertIntoOrder.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131058957580072251" remote="131058957580000000" Dst="2" />
 <file name="user.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059087806084597" remote="131059087800000000" Dst="2" />
 <file name="user.php" server="elvis.rowan.edu/public_html/" local="131059087810000000" remote="131059089740000000" Dst="2" />
-<file name="edit_order.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059396374963907" remote="131059396370000000" Dst="2" />
-<file name="edit_order.php" server="elvis.rowan.edu/public_html/" local="131059396374963907" remote="131059397390000000" Dst="2" />
+<file name="edit_order.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059506108545708" remote="131059506100000000" Dst="2" />
+<file name="edit_order.php" server="elvis.rowan.edu/public_html/" local="131059506108545708" remote="131059506450000000" Dst="2" />
 <file name="set_orderID.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059234463112566" remote="131059234460000000" Dst="2" />
 <file name="set_orderID.php" server="elvis.rowan.edu/public_html/" local="131059234463112566" remote="131059237270000000" Dst="2" />
 <file name="edit_contains.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059390005561028" remote="131059390000000000" Dst="2" />
 <file name="edit_contains.php" server="elvis.rowan.edu/public_html/" local="131059390005561028" remote="131059390340000000" Dst="2" />
 <file name="removeFromOrder.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059378055229976" remote="131059378050000000" Dst="2" />
 <file name="removeFromOrder.php" server="elvis.rowan.edu/public_html/" local="131059380850000000" remote="131059380850000000" Dst="2" />
+<file name="manage_inventory.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059541998130953" remote="131059541990000000" Dst="2" />
+<file name="manage_inventory.php" server="elvis.rowan.edu/public_html/" local="131059541998130953" remote="131059542570000000" Dst="2" />
+<file name="insertIntoOrder.php" server="elvis.rowan.edu/public_html/" local="131058958160000000" remote="131058958160000000" Dst="2" />
+<file name="update_inventory.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059536425607262" remote="131059536420000000" Dst="2" />
+<file name="insert_inventory.php" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131059558370942387" remote="131059558370000000" Dst="2" />
+<file name="insert_inventory.php" server="elvis.rowan.edu/public_html/" local="131059558370942387" remote="131059558740000000" Dst="2" />
+<file name="update_inventory.php" server="elvis.rowan.edu/public_html/" local="131059536425607262" remote="131059537180000000" Dst="2" />
+<file name="welcome.php" server="elvis.rowan.edu/public_html/" local="131059541103748708" remote="131059542570000000" Dst="2" />
 </dwsync>

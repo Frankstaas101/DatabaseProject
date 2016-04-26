@@ -90,14 +90,14 @@ DELIMITER ;
 
 -- 1. i. Ability to view, add and remove products on the wish list.
 -- ---------------------------------------------------------------------------------
-DELIMITER //
-CREATE PROCEDURE trackOrder (IN order_id INT)
-BEGIN
-  SELECT *
-  from orders
-  where orderID = order_id;
-END //
-DELIMITER ;
+SELECT * FROM wishes WHERE customer_id = '';  -- Add restrictions to get single rowsas well
+
+INSERT INTO wishes(UPC, customer_id)
+VALUES ('','');
+
+DELETE FROM wishes WHERE UPC = '' AND customer_id = '';
+
+
 -- 1. j. Ability to rate products.
 -- ---------------------------------------------------------------------------------
 -- NOTE: use this to check if customer has rated that product yet...

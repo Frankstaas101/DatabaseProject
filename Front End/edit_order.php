@@ -37,6 +37,7 @@
                 <tr>
                     <th>UPC</th>
                     <th>Product</th>
+                    <th>Price Per Unit</th>
                     <th>Total Price</th>
                     <th>Quantity</th>
                     <th>Edit</th>
@@ -53,6 +54,7 @@
                     echo "<tr>";
                     echo "<td>". $UPC . "</td>";
                     echo "<td>" . $Pname . "</td>";
+					echo "<td>" . money_format('%(#10n',  $price) . "</td>";
                     echo "<td>" . money_format('%(#10n',  $price * $quantity) . "</td>";
                     echo "<td>" . $quantity . "</td>";
                     echo "<td><button class=\"edit-button\" onclick=\"update_fields('". $UPC ."','". $quantity ."' )\"></button>

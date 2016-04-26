@@ -88,26 +88,45 @@ BEGIN
 END //
 DELIMITER ;
 
+call trackOrder(1);
+
 -- 1. i. Ability to view, add and remove products on the wish list.
 -- ---------------------------------------------------------------------------------
 DELIMITER //
-CREATE PROCEDURE trackOrder (IN order_id INT)
+CREATE PROCEDURE getWishesByUPC (IN UPC_IN varchar(5))
 BEGIN
   SELECT *
-  from orders
-  where orderID = order_id;
+  from wishes
+  where UPC = UPC_IN;
 END //
 DELIMITER ;
--- 1. j. Ability to rate products.
+
+call getWishesByUPC('00001');
+
+DELIMITER //
+CREATE PROCEDURE addWishesByUPC (IN customer_ID int, IN UPC_IN varchar(5))
+BEGIN
+  INSERT INTO wishes(customerID, UPC)
+	VALUES (customer_ID, UPC_IN);
+END //
+DELIMITER ;
+
+call addWishesByUPC(1, '00001');
+
+-- 1. j. Ability to rate products
 -- ---------------------------------------------------------------------------------
 -- NOTE: use this to check if customer has rated that product yet...
+DELIMITER //
 CREATE PROCEDURE getRating (IN customer_id INT, IN UPC_IN varchar(5))
 BEGIN
   SELECT *
 	from rated
-	WHERE UPC = UPC_IN and customerID = customer_id;
+	WHERE UPC = customer_ID and customerID = UPC_IN;
 END //
 DELIMITER ;
+
+call getRating(1, '00001');
+
 -- ...Then use this if they have already rated, and wish to update
 DELIMITER //
 CREATE PROCEDURE upadateRateProduct (IN customer_id INT, IN UPC_IN varchar(5), IN new_rating INT)
@@ -117,6 +136,9 @@ BEGIN
 	WHERE UPC = UPC_IN and customerID = customer_id;
 END //
 DELIMITER ;
+
+call upadateRateProduct(1, '00001', 1);
+
 -- Else, use this and add a new rating to the table
 DELIMITER //
 CREATE PROCEDURE insertRateProduct (IN customer_id INT, IN UPC_IN varchar(5), IN new_rating INT)
@@ -126,10 +148,19 @@ BEGIN
 END //
 DELIMITER ;
 
--- 2. k. List of products whose inventory is at reorder level.
+call insertRateProduct(1, '00001', 5);
+
+-- 2. k. List of products whose inventory is at reorder level. EMPTY SET
 -- ---------------------------------------------------------------------------------
-SELECT * FROM product
-WHERE ammount <= reorderlevel;
+DELIMITER //
+CREATE PROCEDURE getBelowReorderLevel ()
+BEGIN
+	SELECT * FROM product
+	WHERE ammount <= reorderlevel;
+END //
+DELIMITER ;
+
+call getBelowReorderLevel();
 
 -- 2. l. Gets the customer who haven't ordered anyting in the past n days
 -- ---------------------------------------------------------------------------------
@@ -139,11 +170,12 @@ BEGIN
   SELECT customerID, MAX(orderdate) as date_of_last_order FROM customer LEFT OUTER JOIN orders using (customerID)
 	WHERE customerID NOT IN (
 	SELECT customerID FROM orders
-    WHERE orderdate BETWEEN DATE_SUB(CURDATE(), INTERVAL days_IN day) AND CURDATE())
+    WHERE orderdate BETWEEN DATE_SUB(CURDATE(), INTERVAL 5 day) AND CURDATE())
 GROUP BY customerID;
 END //
 DELIMITER ;
 
+call getInactiveCustomers(100);
 
 -- 2. m. List of products that are not selling “too well”(*), which might 
 -- 2. m. be offered as specials.
@@ -155,9 +187,12 @@ begin
     from product
     where UPC not in (select UPC
 						from contains
-						having count(UPC) > selling_poorly_limit);
+						group by UPC
+						having count(UPC) > 3);
 END //
-DELIMITER ; 
+DELIMITER ;
+
+call getSellingPoorly(9);
 
 -- 2. o. List of highly rated products.
 -- ---------------------------------------------------------------------------------
@@ -171,7 +206,7 @@ begin
 END //
 DELIMITER ; 
 
-CALL getInactiveCustomers(5);
+CALL getHighestRated();
 
 
 -- 2. p. List of highly wished products.
@@ -183,7 +218,7 @@ begin
 	select UPC, count(*)
     from wishes
     group by UPC
-    having count(*) > wished_limit;
+    having count(*) > 9;
 END //
 DELIMITER ;
 
@@ -203,17 +238,22 @@ begin
 	order by customerID asc;
 END //
 DELIMITER ;
+
+call getWishedButNotBought();
+
 -- for use of finding a given customer's wished but not bought list
 DELIMITER //
 Create Procedure getWishedButNotBoughtByID (IN customer_id int) 
 begin
 	select UPC, customerID
     from wishes AS S
-    where customerID = 7 and UPC not in (Select UPC
+    where customerID = customer_id and UPC not in (Select UPC
 													from orders
 													where S.customerID = orders.customerID);
 END //
-DELIMITER ; 
+DELIMITER ;
+
+call getWishedButNotBoughtByID(7);
 
 -- 2. r. List of customers who rated products they did not buy.
 -- ---------------------------------------------------------------------------------
@@ -229,7 +269,9 @@ begin
 END //
 DELIMITER ; 
 
--- 2. s. List of customers who did not rate any products they bought. Bob
+call getRatedButNotBought();
+
+-- 2. s. List of customers who did not rate any products they bought.
 -- ---------------------------------------------------------------------------------
 DELIMITER //
 Create Procedure getBoughtButNotRated () 
@@ -242,6 +284,8 @@ begin
 	order by customerID asc;
 END //
 DELIMITER ; 
+
+call getBoughtButNotRated();
 
 -- Through the Customer component:
 -- 2. t. List of bestselling products. Bob
@@ -256,6 +300,9 @@ begin
     having count(UPC) > sell_limit;
 END //
 DELIMITER ;
+
+call getBestSellingByLimit(9);
+
 -- num_limit is the top x ammount of best sellers you want to retain, ordered, desc, by the their UPC's respective count in the conatains tabale
 DELIMITER //
 Create Procedure getBestSellingTopNum (in num_limit int) 
@@ -264,15 +311,17 @@ begin
     from contains
     group by UPC
     order by count(*) desc
-    limit num;
+    limit num_limit;
 END //
 DELIMITER ; 
 
+call getBestSellingTopNum(5);
+
 -- 2. u. A suggested list of products for each customer.
--- Given a customer ID, find products not bought by them
+-- Given a customer ID, find products not bought by them, t5hen juxtaposed with the commonly bough tby catgeory return the result
 -- ---------------------------------------------------------------------------------
 DELIMITER //
-Create Procedure getSuggestedForCustomer (in customer_id int(11)) 
+Create Procedure getSuggestedForCustomer (in customer_id int)
 begin
 	select UPC, category
     from prod_category
@@ -292,4 +341,6 @@ begin
 						having count(category) > 5)
 	order by category;
 END //
-DELIMITER ; 
+DELIMITER ;
+
+call getSuggestedForCustomer(13);

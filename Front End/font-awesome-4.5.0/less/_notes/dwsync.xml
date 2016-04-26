@@ -6,7 +6,6 @@
 <file name="fixed-width.less" server="elvis.rowan.edu//home/staasf7/public_html/" local="131021056580000000" remote="131040274990000000" Dst="2" />
 <file name="font-awesome.less" server="elvis.rowan.edu//home/staasf7/public_html/" local="131021056580000000" remote="131040274990000000" Dst="2" />
 <file name="icons.less" server="elvis.rowan.edu//home/staasf7/public_html/" local="131021056580000000" remote="131040274990000000" Dst="2" />
-<file name="larger.less" server="elvis.rowan.edu//home/staasf7/public_html/" local="131021056580000000" remote="131040274990000000" Dst="2" />
 <file name="list.less" server="elvis.rowan.edu//home/staasf7/public_html/" local="131021056580000000" remote="131040274990000000" Dst="2" />
 <file name="mixins.less" server="elvis.rowan.edu//home/staasf7/public_html/" local="131021056580000000" remote="131040274990000000" Dst="2" />
 <file name="path.less" server="elvis.rowan.edu//home/staasf7/public_html/" local="131021056580000000" remote="131040274990000000" Dst="2" />
@@ -19,7 +18,6 @@
 <file name="fixed-width.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="font-awesome.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="icons.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
-<file name="larger.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="list.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="mixins.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="rotated-flipped.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
@@ -31,7 +29,6 @@
 <file name="fixed-width.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="font-awesome.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="icons.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040274990000000" remote="131040274990000000" Dst="2" />
-<file name="larger.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="list.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="mixins.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="path.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040274990000000" remote="131040274990000000" Dst="2" />
@@ -39,4 +36,6 @@
 <file name="stacked.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 <file name="variables.less" server="S:/Users/Frank-SSD/Desktop/Testing Server/" local="131040275000000000" remote="131040275000000000" Dst="2" />
 <file name="path.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
+<file name="set_contains.php" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131059237260000000" Dst="2" />
+<file name="larger.less" server="elvis.rowan.edu/public_html/" local="131040274990000000" remote="131040274990000000" Dst="2" />
 </dwsync>

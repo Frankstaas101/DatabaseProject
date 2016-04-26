@@ -22,13 +22,13 @@
              </tr>
         <?php	
         $query = "select UPC, Pname, price, avg( rating) as avg_rating from product left outer join rated using(UPC) group by UPC order by avg_rating desc;";
-        
+										
         if ($stmt = $connection->prepare($query)) {
             $stmt->execute();
             $stmt->bind_result($UPC, $Pname, $price, $avg_rating);
              while ($stmt->fetch()) {
                 echo "<tr>";
-                echo "<td class=\"tooltip\"><span class=\"tooltiptext\">This item is on Sale!</span>". $UPC . "</td>";
+                echo "<td>". $UPC . "</td>";
                 echo "<td>" . $Pname . "</td>";
                 echo "<td>$" . $price . ".00</td>";
                 echo "<td><button class=\"add-cart-button\" onclick=\"add('". $Pname ."')\"></button></td>";

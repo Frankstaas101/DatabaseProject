@@ -92,6 +92,7 @@ call trackOrder(1);
 
 -- 1. i. Ability to view, add and remove products on the wish list.
 -- ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 DELIMITER //
 CREATE PROCEDURE getWishesByUPC (IN UPC_IN varchar(5))
 BEGIN
@@ -114,6 +115,17 @@ DELIMITER ;
 call addWishesByUPC(1, '00001');
 
 -- 1. j. Ability to rate products
+=======
+SELECT * FROM wishes WHERE customer_id = '';  -- Add restrictions to get single rowsas well
+
+INSERT INTO wishes(UPC, customer_id)
+VALUES ('','');
+
+DELETE FROM wishes WHERE UPC = '' AND customer_id = '';
+
+
+-- 1. j. Ability to rate products.
+>>>>>>> origin/master
 -- ---------------------------------------------------------------------------------
 -- NOTE: use this to check if customer has rated that product yet...
 DELIMITER //
